@@ -1,10 +1,11 @@
 import { ThemeProvider } from 'react-jss'
 import { AppTheme } from './AppTheme';
+import Button from './components/Button';
 
 function App() {
   return (
     <ThemeProvider theme={AppTheme}>
-      hello
+      <Button label="button" />
     </ThemeProvider>
   );
 }
