@@ -6,7 +6,7 @@ const useStyles = createUseStyles(theme => (
     {
         label:{
             display: 'block',
-            color: theme.color.black,
+            color: theme.color.gray600,
             fontWeight: theme.fontWeight.medium,
             fontSize: '12px',
         }

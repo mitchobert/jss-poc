@@ -6,17 +6,26 @@ const useStyles = createUseStyles(theme => (
             display: 'block',
             color: theme.color.black,
             fontWeight: theme.fontWeight.medium,
-            fontSize: '12px',
-            border: '1px solid #000',
+            fontSize: '14px',
+            boxShadow: '0px 3px 4px rgb(0, 0, 0, 0.2)',
+            background: theme.color.white,
 
             '& > .accordionPanel': {
-                padding: '16px',
+                display: 'flex',
+                alignItem: 'center',
+                justifyContent: 'space-between',
+                padding: '16px 24px',
                 cursor: 'pointer',
             },
 
             '& > .accordionContent': {
-                fontSize: '16px',
-            }
+                padding: '0 24px 16px 24px',
+
+                '&.expanded': {
+                    marginBottom: '24px',
+                },
+            },
+
         },
     })
 );

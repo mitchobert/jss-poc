@@ -1,11 +1,11 @@
 const styles = (theme) => ({
     link: {
         fontSize: '14px',
-        color: theme.color.blue100,
+        color: theme.color.blue400,
         textDecoration: 'none',
 
         '&:hover': {
-            color: '#1e90ff',
+            color: theme.color.blue800,
             textDecoration: 'underline',
         },
     },
