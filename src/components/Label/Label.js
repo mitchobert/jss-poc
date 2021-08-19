@@ -1,31 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
+import styles from './Label.styles';
 
-const useStyles = createUseStyles(theme => (
-    {
-        label:{
-            display: 'block',
-            color: theme.color.gray600,
-            fontWeight: theme.fontWeight.medium,
-            fontSize: '12px',
-        }
-    })
-);
+const useStyles = createUseStyles(styles, { name: 'Label' });
 
 function Label({ labelText } = this.props) {
-    const classes = useStyles();
-    return (
-        <label className={classes.label}>{labelText}</label>
-    );
+  const classes = useStyles();
+  return (
+    <label className={classes.label}>{labelText}</label>
+  );
 }
 
 Label.defaultProps = {
-    labelText: '',
+  labelText: '',
 };
 
 Label.propTypes = {
-    labelText: PropTypes.string,
+  labelText: PropTypes.string,
 };
 
 export default Label;

@@ -1,17 +1,11 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import styles from './Example.styles';
 
-const useStylesFromThemeFunction = createUseStyles(theme => ({
-  example: {
-    background: theme.color.gray200,
-    padding: theme.spacing.md,
-    marginBottom: theme.spacing.lg,
-  },
-}
-));
+const useStyles = createUseStyles(styles, { name: 'Example' });
 
 function Example({ children, ...props } = this.props) {
-  const classes = useStylesFromThemeFunction(props);
+  const classes = useStyles();
   return (
     <div className={classes.example}>
       {children}

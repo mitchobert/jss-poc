@@ -2,18 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import Label from '../Label';
+import styles from './TextField.styles';
 
-const useStyles = createUseStyles(theme => (
-  {
-    textField: {
-      display: 'block',
-      padding: '8px',
-      border: `1px solid ${theme.color.gray400}`,
-      marginTop: theme.spacing.sm,
-    },
-  })
-);
-
+const useStyles = createUseStyles(styles, { name: 'Text-Field' });
 function TextField({ labelText, id, name, value, onChange } = this.props) {
   const classes = useStyles();
   return (
